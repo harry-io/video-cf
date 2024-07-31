@@ -3,10 +3,10 @@ import time
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 import requests
-from app.services import video_sdk
+from services import video_sdk
 from pydantic import BaseModel
 import dotenv
-from app.core.database import supabase
+from core.database import supabase
 
 dotenv.load_dotenv()
 
@@ -129,5 +129,4 @@ def wait_for_job_completion(job_id, api_key, max_wait_time=300, check_interval=1
 @router.get("/recordings/{user_id}")
 async def fetch_rec_from_supabase(user_id: str):
     response = supabase.from_("recordings").select("*").eq("user_id", user_id).execute()
-    print(f"res____rec____supabase____: {response}")
     return response.data

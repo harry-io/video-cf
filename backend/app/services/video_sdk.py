@@ -1,7 +1,7 @@
 import asyncio
 import uuid
 import httpx
-from app.core.config import settings
+from core.config import settings
 import os
 
 

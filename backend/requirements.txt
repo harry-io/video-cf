@@ -1,6 +1,6 @@
-uvicorn
 fastapi
 httpx
 supabase
 pydantic
-pydantic-settings
+pydantic_settings
+requests

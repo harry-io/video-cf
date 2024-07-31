@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import meetings
+from api import meetings
 
 app = FastAPI(
     title="Video Meeting Service API",

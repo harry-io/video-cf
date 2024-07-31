@@ -1,0 +1,6 @@
+uvicorn
+fastapi
+httpx
+supabase
+pydantic
+pydantic-settings
